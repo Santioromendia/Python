@@ -1,0 +1,32 @@
+{% extends "app_pagina/base.html" %}
+
+{%block title%}
+    |cliente
+{%endblock title%}
+
+{%block content_title%}
+    CLIENTES
+{%endblock content_title%}
+
+{% block content %}
+    <table border="2">
+        <thead>
+            <th>Nombre</th>
+            <th>apellido</th>
+        </thead>
+        <tbody>
+
+            {% for cliente in clientes %}
+                <tr>
+                    <td> {{cliente.nombre}}</td>
+                    <td> {{cliente.apellido}}</td>
+                </tr>
+            {%endfor%}
+        </tbody>
+
+    </table>
+        <button><a href="{% url "cliente:cliente_create" %}">atras</a></button>
+        <button><a href="{% url "app_pagina:index" %}">inicio</a></button>
+    
+
+{%endblock content%}

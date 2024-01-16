@@ -1,0 +1,25 @@
+{% extends "app_pagina/base.html" %}
+
+{%block title%}
+    |cliente
+{%endblock title%}
+
+{%block content_title%}
+    CLIENTE
+{%endblock content_title%}
+
+{%block content%}
+    
+    <h1>cliente: Crear </h1>
+
+    <form method="post">
+        {% csrf_token%}
+        {{ form.as_p }}
+        <button type="submit">Guardar</buttom>
+    </form>
+
+    <button><a href="{% url "cliente:index" %}">atras</a></button>
+    <button><a href="{% url "app_pagina:index" %}">inicio</a></button>
+
+
+{%endblock content%}
