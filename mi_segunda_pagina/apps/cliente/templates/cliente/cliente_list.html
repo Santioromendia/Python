@@ -1,0 +1,37 @@
+{% extends "principal/base.html" %}
+
+{% block title %}
+    | Lista de clientes
+{% endblock title %}
+
+{%block content_title %}
+    LISTA DE CLIENTES
+{%endblock content_title%}
+
+{%block content%}
+    <h3>Lista de clientes</h3>
+
+        <table border="1">
+            <thead>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Nacimiento</th>
+                <th>Pais de origen</th>
+                
+                
+            </thead>
+            <tbody>
+                {%for cliente in clientes%}
+                    <tr>
+                        <td>{{cliente.nombre}}</td>
+                        <td>{{cliente.apellido}}</td>
+                        <td>{{cliente.nacimiento}}</td>
+                        <td>{{cliente.pais_origen_id}}</td>
+                        
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+        <button><a href="{% url 'principal:index'%}"> inicio </a> </button>
+    
+{%endblock content%}

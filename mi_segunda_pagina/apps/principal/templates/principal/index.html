@@ -1,19 +1,13 @@
-<!DOCTYPE html>
+{% extends "principal/base.html" %}
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Hola mundo</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
+{% block title %}
+    | inicio
+{% endblock title %}
 
-    <body>
-        <h1>inicio</h1>
-        
-        <button><a href="{% url 'cliente:index'%}"> cliente </a> </button>
-        
-    </body>
-</html>
+{%block content_title %}
+    INICIO
+{%endblock content_title%}
+
+{%block content%}
+    <button><a href="{% url 'cliente:index'%}"> cliente </a> </button>
+{%endblock content%}
