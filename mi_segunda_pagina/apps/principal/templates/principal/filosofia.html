@@ -5,12 +5,46 @@
 {% endblock title %}
 
 {%block content_title %}
-    Filosofia
 {%endblock content_title%}
 
 {%block content%}
 
-    <button><a href="{% url 'principal:index'%}"> inicio </a> </button>
-    <button><a href="{% url 'cliente:cliente_list'%}"> Lista de clientes </a> </button>
-    <button><a href="{% url 'cliente:cliente_create'%}"> Crear cliente </a> </button>
+    <header class="py-2 bg-light border-bottom mb-2">
+
+        <div class="container">
+            <div class="text-center my-5">
+                <h1 class="fw-bolder">Filosofia del Gym</h1>
+                <p class="lead mb-0">Gymtastic es para todos y esa es nuestra filosofía.</p>
+            </div>
+        
+    </header>
+    <body>
+        <div class="container">
+            
+            <p class="lead mb-0"> </p>
+ 
+            <h2>Estas son nuestras reglas y pensamientos basicos.</h2>
+            <p>En este gimnasio no juzgamos.</p>
+            <p>Somos una sociedad diversa y tenemos una cultura de diversión.</p>
+            <p>Nada es mucho ni muy poco.</p>
+            <p>Buscamos animarte, entusiasmarte y entretenerte.</p>
+            <p>No hay un solo tipo. Ni una sola razón. Ni un solo camino.</p>
+            <p>No existen miradas que desaprueben.</p>
+            <p>Hay lugar para todos.</p>
+            <p>Cualquier persona que nos elija para alcanzar sus objetivos y respete al prójimo será bienvenida.</p>
+        
+
+            <div class="col-lg-6">
+                <div class="text-center my-3">
+                    <a href="#!"><img class="card-img-top" src="https://grupo1171fundamentosdeadministracionfca.files.wordpress.com/2017/09/crear-reglas-en-outlook.jpg?w=736" alt="..." /></a>
+                </div>
+            </div>  
+
+            <div class="text-center my-5">
+                <button><a href="{% url 'principal:index'%}"> Atras </a> </button>
+            </div>  
+           
+        </div> 
+    </body>                 
+
 {%endblock content%}
