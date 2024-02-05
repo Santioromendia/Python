@@ -5,6 +5,9 @@ from django.shortcuts import render
 def  index(request):
     return render(request, "principal/index.html")
 
+def maquinas(request):
+    return render(request, "principal/maquinas.html")
+
 def planes(request):
     return render(request, "principal/planes.html")
 
@@ -16,4 +19,6 @@ def filosofia(request):
 
 def quienes_somos(request):
     return render(request, "principal/quienes_somos.html")
+
+
 
