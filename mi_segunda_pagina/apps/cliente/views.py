@@ -22,3 +22,4 @@ def cliente_create(request) -> HttpResponse:
     else:
         form=forms.clienteform()
     return render(request, "cliente/cliente_create.html",{"form":form})
+

@@ -1,0 +1,16 @@
+{% extends "principal/base.html" %}
+
+{% block title %}
+    | Filosofia
+{% endblock title %}
+
+{%block content_title %}
+    Filosofia
+{%endblock content_title%}
+
+{%block content%}
+
+    <button><a href="{% url 'principal:index'%}"> inicio </a> </button>
+    <button><a href="{% url 'cliente:cliente_list'%}"> Lista de clientes </a> </button>
+    <button><a href="{% url 'cliente:cliente_create'%}"> Crear cliente </a> </button>
+{%endblock content%}
