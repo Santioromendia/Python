@@ -1,6 +1,9 @@
 from django.contrib import admin
 from django.urls import path
 from . import views
+from .views import *
+
+
 
 
 urlpatterns = [
@@ -11,6 +14,6 @@ urlpatterns = [
     path("principal/filosofia", views.filosofia, name="filosofia"),
     path("principal/quienes_somos", views.quienes_somos, name="quienes_somos"),
     path("principal/maquinas", views.maquinas, name="maquinas"),
-    
+    path("login/", CustomLoginView.as_view(), name="login"),
     
 ]

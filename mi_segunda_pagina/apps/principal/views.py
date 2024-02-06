@@ -1,5 +1,7 @@
+from django.contrib.auth.views import LoginView
 from django.shortcuts import render
 
+from .forms import *
 # Create your views here.
 
 def  index(request):
@@ -21,4 +23,6 @@ def quienes_somos(request):
     return render(request, "principal/quienes_somos.html")
 
 
-
+class CustomLoginView(LoginView):
+    authentication_form= CustomAuthenticationForm
+    template_name= "principal/login.html"

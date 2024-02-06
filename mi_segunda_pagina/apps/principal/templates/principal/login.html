@@ -1,0 +1,24 @@
+{% extends "principal/base.html" %}
+
+{% block title %}
+    | Login
+{% endblock title %}
+
+{%block content_title %}
+    Login
+{%endblock content_title%}
+
+{%block content%}
+
+   <form method="post" class="form-control">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" name="next" value="{%url 'principal:index'%}">
+
+        <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+        <a href="{% url 'principal:index'%}" class="btn btn-primary">Cancelar</button></a>
+        
+    
+    </form>
+
+{%endblock content%}
