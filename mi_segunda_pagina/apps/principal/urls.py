@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path
+from django.contrib.auth.views import LogoutView
 from . import views
 from .views import *
 
@@ -15,5 +16,6 @@ urlpatterns = [
     path("principal/quienes_somos", views.quienes_somos, name="quienes_somos"),
     path("principal/maquinas", views.maquinas, name="maquinas"),
     path("login/", CustomLoginView.as_view(), name="login"),
+    path("logout/", LogoutView.as_view(template_name="principal/logout.html"), name="logout"),
     
 ]
