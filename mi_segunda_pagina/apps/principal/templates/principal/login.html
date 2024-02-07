@@ -5,11 +5,19 @@
 {% endblock title %}
 
 {%block content_title %}
-    Login
+    
 {%endblock content_title%}
 
 {%block content%}
+    <header class="py-2 bg-light border-bottom mb-2">
 
+        <div class="container">
+            <div class="text-center my-5">
+                <h1 class="fw-bolder">Login</h1>
+                
+            </div>
+        
+    </header>
    <form method="post" class="form-control">
         {% csrf_token %}
         {{ form.as_p }}

@@ -4,3 +4,4 @@ from . import models
 # Register your models here.
 admin.site.register(models.pais)
 admin.site.register(models.cliente)
+admin.site.register(models.sede)

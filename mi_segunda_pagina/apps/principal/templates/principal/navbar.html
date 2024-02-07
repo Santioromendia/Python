@@ -8,11 +8,11 @@
             
             
             <li class="nav-item"><a class="nav-link {%if request.path == '/'%} active {% endif %}" href="{%url 'principal:index' %}">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link {%if '/cliente/' in request.path %} active{% endif %}"href="{%url 'cliente:index' %}">Cliente</a></li>
+            <li class="nav-item"><a class="nav-link {%if '/cliente/create/' in request.path %} active{% endif %}"href="{%url 'cliente:cliente_create' %}">Suscribirse</a></li>
             
             {%if user.is_authenticated%}
 
-            <li class="nav-item"><a class="nav-link {%if '/planes/' in request.path%} active{% endif %}"href="{% url 'principal:planes'%}">Planes </a> </li>
+            <li class="nav-item"><a class="nav-link {%if '/cliente_list/' in request.path%} active{% endif %}"href="{% url 'cliente:cliente_list'%}">Lista de clientes </a> </li>
             <li class="nav-item nav-link text-bg-info">{{ user.username }} </li>
             
             <li class="nav-item ">

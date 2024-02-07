@@ -5,12 +5,66 @@
 {% endblock title %}
 
 {%block content_title %}
-    Sedes
+    
 {%endblock content_title%}
 
 {%block content%}
+<header class="py-2 bg-light border-bottom mb-2">
 
-    <button><a href="{% url 'principal:index'%}"class="btn btn-success"> inicio </a> </button>
-    <button><a href="{% url 'cliente:cliente_list'%}"class="btn btn-success"> Lista de clientes </a> </button>
-    <button><a href="{% url 'cliente:cliente_create'%}"class="btn btn-success"> Crear cliente </a> </button>
+    <div class="container">
+        <div class="text-center my-5">
+            <h1 class="fw-bolder">Sedes</h1>
+            <p class="lead mb-0">Nuestras sedes, donde podras ir con el simple hecho de estar suscripto. </p>
+        </div>
+    
+</header>
+
+<div class="row">
+    <div class="col-lg-4">
+        <!-- Blog post-->
+        <div class="card mb-4">
+            <a href="#!"><img class="card-img-top" src="" alt="..." /></a>
+            <div class="card-body">
+                <h2 class="card-title h4">Caballito</h2>
+                <p class="card-text">El barrio de caballito, sede principal, aqui tiene las mejores maquinas.</p>
+                
+                <a class="btn btn-success" href="{%url 'cliente:cliente_create' %}">Suscribirme</a>
+            </div>
+        </div>
+        <!-- Blog post-->
+        
+    </div>
+    <div class="col-lg-4">
+        <!-- Blog post-->
+        <div class="card mb-4">
+            <a href="#!"><img class="card-img-top" src="" alt="..." /></a>
+            <div class="card-body">
+                <h2 class="card-title h4">Retiro</h2>
+                <p class="card-text">El barrio de retiro, la mejor y mas bella ubicacion, cerca del tren.</p>
+                
+                <a class="btn btn-success" href="{%url 'cliente:cliente_create' %}">Suscribirme</a>
+            </div>
+        </div>
+
+        
+    </div>
+    <div class="col-lg-4">
+        <!-- Blog post-->
+        <div class="card mb-4">
+            <a href="#!"><img class="card-img-top" src="" alt="..." /></a>
+            <div class="card-body">
+                <h2 class="card-title h4">Lomas de zamora</h2>
+                <p class="card-text">El barrio de Lomas, para nuestros vecinos de provincia.</p>
+                
+                <a class="btn btn-success" href="{%url 'cliente:cliente_create' %}">Suscribirme</a>
+            </div>
+        </div>
+
+        
+    </div>
+    
+</div>
+    
+    
 {%endblock content%}
+
