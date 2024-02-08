@@ -22,6 +22,10 @@ def filosofia(request):
 def quienes_somos(request):
     return render(request, "principal/quienes_somos.html")
 
+def registrado(request):
+    return render(request, "principal/registrado.html")
+
+
 
 class CustomLoginView(LoginView):
     authentication_form= CustomAuthenticationForm

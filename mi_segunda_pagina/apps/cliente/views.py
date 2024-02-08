@@ -18,7 +18,7 @@ def cliente_create(request) -> HttpResponse:
         form=forms.clienteform(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("cliente:cliente_list")
+            return redirect("principal:registrado")
     else:
         form=forms.clienteform()
     return render(request, "cliente/cliente_create.html",{"form":form})
