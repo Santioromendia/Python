@@ -25,7 +25,8 @@ def quienes_somos(request):
 def registrado(request):
     return render(request, "principal/registrado.html")
 
-
+def about(request):
+    return render(request, "principal/about.html")
 
 class CustomLoginView(LoginView):
     authentication_form= CustomAuthenticationForm
