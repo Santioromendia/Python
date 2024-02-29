@@ -1,0 +1,35 @@
+<!-- Responsive navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+    <a class="navbar-brand" href="{%url 'principal:index' %}">GYMTASTIC</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            
+            
+            <li class="nav-item"><a class="nav-link {%if request.path == '/'%} active {% endif %}" href="{%url 'principal:index' %}">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link {%if '/cliente/create/' in request.path %} active{% endif %}"href="{%url 'cliente:cliente_create' %}">Suscribirse</a></li>
+            <li class="nav-item"><a class="nav-link {%if '/principal/about/' in request.path %} active{% endif %}"href="{%url 'principal:about' %}">Acerca de mi</a></li>
+
+            {%if user.is_authenticated%}
+
+            <li class="nav-item"><a class="nav-link {%if '/cliente_list/' in request.path%} active{% endif %}"href="{% url 'cliente:cliente_list'%}">Lista de clientes </a> </li>
+            <li class="nav-item nav-link text-bg-info">{{ user.username }} </li>
+            
+            <li class="nav-item ">
+                <form action="{%url 'principal:logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-dark">Logout</button>
+                    
+                </form>
+            {% else %}
+
+            <li class="nav-item"><a class="nav-link {%if '/login/' in request.path%} active{% endif %}"href="{% url 'principal:login'%}">Login </a> </li>
+
+            {%endif%}
+            
+
+        </ul>
+    </div>
+</div>
+</nav> 

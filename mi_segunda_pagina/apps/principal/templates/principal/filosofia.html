@@ -1,0 +1,51 @@
+{% extends "principal/base.html" %}
+
+{% block title %}
+    | Filosofia
+{% endblock title %}
+
+{%block content_title %}
+{%endblock content_title%}
+
+{%block content%}
+
+    <header class="py-2 bg-light border-bottom mb-2">
+
+        <div class="container">
+            <div class="text-center my-5">
+                <h1 class="fw-bolder">Filosofia del Gym</h1>
+                <p class="lead mb-0">Gymtastic es para todos y esa es nuestra filosofía.</p>
+            </div>
+        
+    </header>
+    <body>
+        <div class="container">
+            
+            <p class="lead mb-0"> </p>
+ 
+            <h2>Estas son nuestras reglas y pensamientos basicos.</h2>
+            <ol>
+                <li>En este gimnasio no juzgamos.</li>
+                <li>Somos una sociedad diversa y tenemos una cultura de diversión.</li>
+                <li>Nada es mucho ni muy poco.</li>
+                <li>Buscamos animarte, entusiasmarte y entretenerte.</li>
+                <li>No hay un solo tipo. Ni una sola razón. Ni un solo camino.</li>
+                <li>No existen miradas que desaprueben.</li>
+                <li>Hay lugar para todos.</li>
+                <li>Cualquier persona que nos elija para alcanzar sus objetivos y respete al prójimo será bienvenida.</li>
+            </ol>
+
+            <div class="col-lg-6">
+                <div class="text-center my-3">
+                    <a href="#!"><img class="card-img-top" src="https://grupo1171fundamentosdeadministracionfca.files.wordpress.com/2017/09/crear-reglas-en-outlook.jpg?w=736" alt="..." /></a>
+                </div>
+            </div>  
+
+            <div class="text-center my-5">
+                <button><a href="{% url 'principal:index'%}"class="btn btn-success"> Atras </a> </button>
+            </div>  
+           
+        </div> 
+    </body>                 
+
+{%endblock content%}

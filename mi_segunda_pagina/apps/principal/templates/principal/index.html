@@ -1,0 +1,79 @@
+{% extends "principal/base.html" %}
+
+{% block title %}
+    | inicio
+{% endblock title %}
+
+{%block content_title %}
+{%endblock content_title%}
+
+{%block content%}
+<!-- Page header with logo and tagline-->
+<header class="py-2 bg-light border-bottom mb-2">
+    <div class="container">
+        <div class="text-center my-5">
+            <h1 class="fw-bolder">Bienvenido al sitio web de nuestros gimnasios!</h1>
+            <p class="lead mb-0">Mire nuestras increibles ofertas y sea parte de nuestro entrenamiento.</p>
+        </div>
+    </div>
+</header>
+    <div class="center">
+        <!-- Blog entries-->
+        <div>
+            <!-- Featured blog post-->
+            <div class="card mb-2">
+                <a href=""><img class="card-img-top" src="https://www.lavanguardia.com/andro4all/hero/2022/03/Las-mejores-8-aplicaciones-de-rutinas-para-el-gimnasio-1.jpg?width=1200&aspect_ratio=16:9" alt="..." /></a>
+                <div class="card-body">
+                    <h2 class="card-title">¿Cuales son las maquinas que tienen nuestros gimnasios?</h2>
+                    <p class="card-text">¡Vea en esta seccion cuales son nuestras principales maquinas de vanguardia, las cuales utilizamos para un mayor desarrollo fisico!</p>
+                    <a class="btn btn-success" href="{%url 'principal:maquinas' %}">VER</a>
+                </div>
+            </div>
+            <!-- Nested row for non-featured blog posts-->
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- Blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" src="https://blogscdn.thehut.net/app/uploads/sites/450/2023/05/Ultimate-gym-guide-hero_1685455474_1685541432.jpg" alt="..." /></a>
+                        <div class="card-body">
+                            <h2 class="card-title h4">PLANES</h2>
+                            <p class="card-text">Nuestros principales planes para que entrene mas y gaste menos.</p>
+                            <a class="btn btn-success" href="{%url 'principal:planes' %}" >VER</a>
+                        </div>
+                    </div>
+                    <!-- Blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" src="https://www.cinconoticias.com/wp-content/uploads/normas-de-comportamiento.jpg" alt="..." /></a>
+                        <div class="card-body">
+                            <h2 class="card-title h4">FILOSOFIA</h2>
+                            <p class="card-text">Le dejamos las reglas de nuestro gimnasio. Es de suma importancia respetarnos entre todos.</p>
+                            <a class="btn btn-success" href="{%url 'principal:filosofia' %}">VER</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Gimnasio_Ol%C3%ADmpico_Juan_de_la_Barrera_2021_4.jpg" alt="..." /></a>
+                        <div class="card-body">
+                            <h2 class="card-title h4">NUESTRAS SEDES</h2>
+                            <p class="card-text">Vea donde estan ubicadas nuestras sedes ¡Probablemente cerca de su casa!</p>
+                            <a class="btn btn-success" href="{%url 'principal:sedes' %}">VER</a>
+                        </div>
+                    </div>
+                    <!-- Blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" src="https://elnumeral.com/wp-content/uploads/2023/01/MAYRA-FIRMO-JUNTO-A-LOS-PROPIETARIOS-DE-UN-GIMNASIO-LA-ADHESION-DEL-LOCAL-AL-PROGRAMA-SOMOS-QUILMES-2.jpg" alt="..." /></a>
+                        <div class="card-body">
+                            <h2 class="card-title h4">¿QUIENES SOMOS?</h2>
+                            <p class="card-text">Conozca mas de nosotros, es de nuestro interes su plena confianza.</p>
+                            <a class="btn btn-success" href="{%url 'principal:quienes_somos' %}">VER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        
+    </div>
+{%endblock content%}

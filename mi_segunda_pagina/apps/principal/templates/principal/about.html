@@ -1,0 +1,45 @@
+{% extends "principal/base.html" %}
+
+{% block title %}
+    | ¿Quien creo este sitio web?
+{% endblock title %}
+
+{%block content_title %}
+{%endblock content_title%}
+
+{%block content%}
+
+    <header class="py-2 bg-light border-bottom mb-2">
+
+        <div class="container">
+            <div class="text-center my-3">
+                <h2 class="fw-bolder">¿Quien creo este sitio web?</h2>
+                
+            </div>
+        
+    </header>
+    <body>
+        <div class="container">
+            <div class="text-center my-5">
+                <p> Hola! Mi nombre es Santiago Fernandez Oromendia, tengo 22 años y vivo en capital federal, Argentina. Estoy comenzando mi recorrido en Coderhouse y sobre todo estoy comenzando a programar, lo cual es algo que busco aprender desde hace muchisimo tiempo, debido a la alta demanda y a mi fanatismo por usar la PC.</p>
+
+                <h3>¿Que fue lo que me inspiro a empezar a programar?</h3>
+                <p> Hace unos años tuve programacion en la escuela con una profesora que nos enseño la base del HTML y apenas de Python, mis ganas de seguir aprendiendo estos lenguajes fueron creciendo con el correr del tiempo hasta hoy dia que quiero trabajar de ello.
+                
+                <h4>¿Hasta donde me gustaria llegar programando?</h4>
+                <p>Por ahora me limitare a contestar esta pregunta con ser freelance, sobretodo por la gran cantidad de conocidos que necesitan una pagina web, mi idea no es quedarme solo en mis conocidos, sino crecer hasta poder crear una empresa de creadores de paginas web. De todas formas, no descarto en un futuro trabajar en una empresa reconocida.
+                    <div class="container ">
+                        <div class="text-center my-3">
+                            <div class="col-lg-6">
+                            
+                                <a href="#!"><img class="card-img-top" src="https://msmk.university/wp-content/uploads/2023/03/Que-es-la-programacion.jpg" alt="..." /></a>
+                            
+                            </div>  
+                        </div>     
+                    </div>
+                <button><a href="{% url 'principal:index'%}"class="btn btn-success"> Atras </a> </button>
+            </div>    
+        </div> 
+    </body>                 
+
+{%endblock content%}
